@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+
+<html>
+	<head>
+		<title>Calculo de consumo</title>
+		<h3>¿Alcohol o Gasolina?</h3>
+	</head>
+</html>
+
+<script>
+	
+	var tanque_1 = 40;
+	var kmtotales_1 = 480; 
+	var GasolinaGastada = kmtotales_1/tanque_1;
+
+	document.write("<br>");
+	document.write("<br>");
+	document.write("El consumo de Gasolina que realiza el auto es de: " + Math.round(GasolinaGastada) + "Km/L.");
+
+	document.write("<br>");
+	document.write("<br>");
+
+	var tanque_2 = 40;
+	var kmtotales_2 = 300;
+	var Alcohol_gastado = kmtotales_2/tanque_2;
+
+	document.write("El consumo de alcohol que realiza el auto es de: " + Math.round(Alcohol_gastado) + "Km/L.");
+
+</script>

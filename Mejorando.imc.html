@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+
+<h1>Calculadora de IMC.</h1>
+
+<script>
+	
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+	function calcularIMC(peso,altura) {
+
+		return (peso / (altura * altura));
+
+	}
+
+	nombre = prompt("Digite su nombre:");
+	pesoInformado = prompt("Informe su peso");
+	alturainformada = prompt("Informe su altura");
+
+	IMCcalculado = calcularIMC(pesoInformado,alturainformada);
+
+	imprimir("El IMC calculado es: " + IMCcalculado);
+
+
+	if (IMCcalculado < 18.5) {
+	
+		imprimir("IMC correspondiente a Bajo Peso")
+	}
+
+
+	if (IMCcalculado >= 18.5)
+		
+		if (IMCcalculado < 24.9) {
+			
+			imprimir("IMC correspondiente a Peso Normal")
+	}
+
+
+	if (IMCcalculado >= 25)
+		
+		if (IMCcalculado < 29.9) {
+
+		imprimir("IMC correspondiente a Sobre Peso")
+	}
+
+
+	if (IMCcalculado >= 30)
+		if (IMCcalculado < 34.9) {
+	
+		imprimir("IMC correspondiente a Obesidad Tipo 1")
+	}
+
+
+	if (IMCcalculado >= 35)
+		if (IMCcalculado < 39.9) {
+	
+		imprimir("IMC correspondiente a Obesidad Tipo 2")
+	}
+
+
+	if (IMCcalculado >= 40) {
+	
+		imprimir("IMC correspondiente a Obesidad Tipo 3")
+	}
+
+</script>

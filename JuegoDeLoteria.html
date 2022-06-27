@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+
+<h1>Juego de Loteria.</h1>
+
+<script>
+	
+	function saltarLinea() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+	}
+
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+	function sorteo(n) {
+
+		return Math.round(Math.random()*n);
+
+	}
+
+	var numeroPensado = sorteo(10);
+	var numeroLanzado = parseInt(prompt("Ingrese un numero entre 0-10"));
+
+	if (numeroPensado == numeroLanzado) {
+
+		imprimir("Usted le achunto al numero");
+	}
+		else {
+			if (numeroLanzado < numeroPensado) {
+				imprimir("Usted le erro, su numero era menor al numero lanzado.");
+				}
+				else {
+					imprimir("Usted le erro, su numero era mayor al numero lanzado.");
+					}	
+				}
+</script>
